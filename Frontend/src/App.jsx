@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 
 import About from "./About/About.jsx"
 import Contact from './components/Contact'
@@ -12,7 +12,7 @@ import Why from "./Why/why.jsx"
 import { useAuth } from './components/context/AuthProvider'
 
 const App = () => {
-  const [authUser,setAuthUser]=useAuth();
+  const [authUser]=useAuth();
         console.log(authUser)
   return (
     <>
@@ -20,7 +20,7 @@ const App = () => {
      
    <Routes >
       <Route path='/' element={<Home/>}></Route>
-      <Route path='/course' element={authUser?<Courses/>:<Navigate to="/signup"/>}/>
+      <Route path='/course' element={<Courses/>}></Route>
       <Route path='/about' element={<About/>}></Route>
       <Route path='/signup' element={<Signup/>}></Route>
       <Route path='/contact' element={<Contact/>}></Route>

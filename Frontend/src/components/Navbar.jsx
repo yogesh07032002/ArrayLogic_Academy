@@ -7,12 +7,14 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Login from "../components/Login";
-import Logout from "./Logout";
 import { useAuth } from "./context/AuthProvider";
 
+// import Login from "../components/Login";
+// import Logout from "./Logout";
+
+
 function Navbar() {
-  const [authUser, setAuthUser] = useAuth();
+  // const [authUser, setAuthUser] = useAuth();
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
@@ -72,6 +74,7 @@ function Navbar() {
   };
 
   return (
+    <>
     <div
       className={`max-w-screen-2xl container mx-auto md:px-20 px-4 dark:bg-slate-900 dark:text-white fixed top-0 left-0 right-0 z-50 ${
         sticky
@@ -119,7 +122,7 @@ function Navbar() {
           <div className="relative">
             <button
               onClick={toggleNotesDropdown} // Toggle visibility on click
-              className="text-orange-500 pr-4 md:pr-5 font-bold text-2xl md:text-xl md:px-4 md:py-2 rounded-md duration-300"
+              className="text-orange-500 pr-2 md:pr-5 font-bold text-xl md:text-xl md:px-4 md:py-2 rounded-md duration-300"
             >
               Notes
             </button>
@@ -179,7 +182,7 @@ function Navbar() {
             >
               <FontAwesomeIcon
                 icon={faFacebook}
-                className="text-blue-600 hover:text-blue-800 duration-300 text-xl"
+                className="text-blue-600 hover:text-blue-800 duration-300 text-sm md:text-xl"
               />
             </a>
             <a
@@ -189,7 +192,7 @@ function Navbar() {
             >
               <FontAwesomeIcon
                 icon={faTwitter}
-                className="text-blue-400 hover:text-blue-600 duration-300 text-xl"
+                className="text-blue-400 hover:text-blue-600 duration-300 text-sm md:text-xl"
               />
             </a>
             <a
@@ -199,7 +202,7 @@ function Navbar() {
             >
               <FontAwesomeIcon
                 icon={faLinkedin}
-                className="text-blue-500 hover:text-blue-700 duration-300 text-xl"
+                className="text-blue-500 hover:text-blue-700 duration-300 text-sm md:text-xl"
               />
             </a>
             <a
@@ -209,21 +212,21 @@ function Navbar() {
             >
               <FontAwesomeIcon
                 icon={faInstagram}
-                className="text-pink-500 hover:text-pink-700 duration-300 text-xl"
+                className="text-pink-500 hover:text-pink-700 duration-300 text-sm md:text-xl"
               />
             </a>
           </div>
 
-          {/* Dark Mode Toggle */}
+          {/* Dark Mode Toggle
           <label className="swap swap-rotate">
             <input
               type="checkbox"
               className="theme-controller"
               value="synthwave"
             />
-          </label>
+          </label> */}
 
-          {authUser ? (
+          {/* {authUser ? (
             <Logout />
           ) : (
             <div className="">
@@ -237,10 +240,16 @@ function Navbar() {
               </a>
               <Login />
             </div>
-          )}
+          )} */}
+          <div>
+  
+                <a className="bg-black text-white px-2 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer ml-5  ">Connect</a>
+    
+          </div>
         </div>
       </div>
     </div>
+    </>
   );
 }
 
