@@ -32,7 +32,7 @@
 ####Node.js and Express.js: For building a robust server-side application.
 ####MongoDB: For storing user and course data.
 ## Tools & Libraries
-####Redux: For state management (if used).
-####Mongoose: For MongoDB object modeling.
-####JWT: For secure authentication.
-####Stripe API: For handling
+#### Redux: For state management (if used).
+#### Mongoose: For MongoDB object modeling.
+#### JWT: For secure authentication.
+#### Stripe API: For handling
