@@ -3,7 +3,6 @@
 ## This is a full-stack web application for an online course store, built using the MERN stack. It allows users to browse, download, and manage courses while providing different functionalities to manage the course catalog.
 
 ## Features:-
-#
 ### User Features:-
 #### Browse a wide range of courses categorized by topics.
 #### Detailed course pages with descriptions, pricing, and ratings.
